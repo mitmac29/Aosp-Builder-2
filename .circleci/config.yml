@@ -10,6 +10,8 @@ jobs:
       - run:
           name: SSH
           command: |
-            sudo apt update && sudo apt install git aria2 rsync neofetch nano tmux screen xclip silversearch* -y
+            sudo apt update && sudo apt install git aria2 rsync neofetch screen xclip silversearch* -y
+            neofetch
             wget https://raw.githubusercontent.com/ibraaltabian17/Aosp-Builder/circleci-project-setup/envsetup.sh && sh envsetup.sh
-            wget https://raw.githubusercontent.com/ibraaltabian17/Aosp-Builder/circleci-project-setup/envsetup.sh && sh mulairepo.sh
+            wget https://raw.githubusercontent.com/ibraaltabian17/Aosp-Builder/circleci-project-setup/mulairepo.sh && sh mulairepo.sh
+            wget https://raw.githubusercontent.com/ibraaltabian17/Aosp-Builder/circleci-project-setup/build.sh && sh build.sh
