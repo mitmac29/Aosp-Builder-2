@@ -1,5 +1,8 @@
 printf "\nMelakukan Envsetup\n"
-
+export DEBIAN_FRONTEND=noninteractive
+DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
+dpkg-reconfigure --frontend noninteractive tzdata
+sudo apt-get install -y tzdata
 sudo apt update -y && sudo apt install git aria2 curl wget rsync zip unzip lzma cpio ccache clang -y
 sudo apt install python3 -y
 sudo ln -sf /usr/bin/python3 /usr/bin/python
