@@ -3,13 +3,14 @@ executors:
   worker:
     docker:
       - image: fr3akyphantom/droid-builder:latest
-      parallelism: 16
+    
 jobs:
   build:
     executor: worker
     steps:
       - run:
           name: SSH
+          parallelism: 12
           command: |
             sudo apt update && sudo apt install git aria2 rsync neofetch screen xclip silversearch* -y
             neofetch
