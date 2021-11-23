@@ -3,6 +3,7 @@ executors:
   worker:
     docker:
       - image: fr3akyphantom/droid-builder:latest
+      parallelism: 16
 jobs:
   build:
     executor: worker
