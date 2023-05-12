@@ -1,10 +1,11 @@
 mkdir -p ~/work
 cd ~/work
 echo Initing Repo
-repo init -u git://github.com/ProjectHiper-ROM/android_manifests.git -b 11
+repo init -u https://github.com/crdroidandroid/android.git -b 11.0
 repo sync -j31 --force-sync --no-tags --no-clone-bundle
-git clone https://github.com/ProjectHiper-ROM/android_device_xiaomi_beryllium device/xiaomi/beryllium
-git clone https://github.com/ProjectHiper-ROM/android_device_xiaomi_sdm845-common device/xiaomi/sdm845-common
-git clone https://github.com/LineageOS/android_kernel_xiaomi_sdm845 kernel/xiaomi/sdm845
-git clone https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi
+git clone https://github.com/mitmac29/device_xiaomi_lavender1 -b 11 device/xiaomi/lavender
+git clone https://github.com/mitmac29/vendor_xiaomi_lavender1 -b 11 vendor/xiaomi/lavender 
+git clone https://github.com/mitmac29/kernel_xiaomi_lavender -b qti-oldcam kernel/xiaomi/lavender
+git clone https://github.com/mitmac29/packages_apps_ViPER4AndroidFX -b main packages/apps/ViPER4AndroidFX
+git clone https://gitlab.com/sanjeevstunner/clang-r450784d -b master prebuilts/clang/host/linux-x86/clang-r450784d
 echo done yeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
